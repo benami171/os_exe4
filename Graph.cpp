@@ -85,7 +85,7 @@ int main() {
     g.addEdge(2, 0);
 
 
-
+// TODO - remove the part below from the main function.
     vector<int> eulerianCircuit = g.findEulerianCycle();
     if (!eulerianCircuit.empty()) {
         cout << "Eulerian Circuit: ";
