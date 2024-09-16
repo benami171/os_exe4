@@ -45,6 +45,7 @@ bool Graph::isEulerianCycle() {
     // check if all vertices with none zero degree are connected
     vector<bool> visited(vertices, false);
     int nonZeroDegreeVertex = -1;
+    // Find the first vertex with non-zero degree
     for (int i = 0; i < vertices; i++) {
         if (!adjList[i].empty()) {
             nonZeroDegreeVertex = i;
@@ -82,9 +83,8 @@ int main() {
     g.addEdge(0, 1);
     g.addEdge(1, 2);
     g.addEdge(2, 0);
-    g.addEdge(0, 3);
-    g.addEdge(3, 4);
-    g.addEdge(4, 0);
+
+
 
     vector<int> eulerianCircuit = g.findEulerianCycle();
     if (!eulerianCircuit.empty()) {
