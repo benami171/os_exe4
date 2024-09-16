@@ -2,19 +2,24 @@
 #define OS_EXE4_GRAPH_HPP
 
 #include <vector>
-#include <iostream>
 #include <list>
+#include <iostream>
+#include <stack>
+#include <algorithm>
 
 using namespace std;
 
 class Graph {
-public:
+private:
     vector<list<int>> adjList;
     int vertices;
     int edges;
-
-
-
+public:
+    Graph(int vertices);
+    void addEdge(int node_u, int node_v);
+    vector<int> findEulerianCycle();
+    bool isEulerianCycle();
+    void dfs(int start_node, vector<bool> &visited);
 };
 
 
