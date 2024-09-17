@@ -17,10 +17,10 @@ private:
 public:
     explicit Graph(int vertices);
     void addEdge(int node_u, int node_v);
-    vector<int> findEulerCycle();
+    vector<int> findEulerianCycle();
     bool isEulerianCycle();
     void dfs(int start_node, vector<bool> &visited);
-    void eulerCycle
+    void eulerFinder();
 };
 
 

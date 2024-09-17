@@ -13,14 +13,24 @@ void Graph::addEdge(int node_u, int node_v) {
     edges++;
 }
 
-vector<int> Graph::findEulerCycle() {
+vector<int> Graph::findEulerianCycle() {
     vector<int> circuit;
     if (!isEulerianCycle()) return circuit;
 
+    // Find a vertex with at least one edge to start
+    int startVertex = -1;
+    for (int i = 0; i < vertices; i++) {
+        if (!adjList[i].empty()) {
+            startVertex = i;
+            break;
+        }
+    }
+    if (startVertex == -1) return circuit; // No edges in the graph
+
     stack<int> currentPath;
     vector<int> tempCircuit;
-    currentPath.push(0);
-    int currentVertex = 0;
+    currentPath.push(startVertex);
+    int currentVertex = startVertex;
 
     while (!currentPath.empty()) {
         if (!adjList[currentVertex].empty()) {
@@ -77,8 +87,18 @@ void Graph::dfs(int start_node, vector<bool> &visited) {
     }
 }
 
-void Graph::eulerFinder
-
+void Graph::eulerFinder() {
+    vector<int> eulerianCycle = findEulerianCycle();
+    if (!eulerianCycle.empty()) {
+        cout << "Eulerian Cycle: ";
+        for (int v : eulerianCycle) {
+            cout << v << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "No Eulerian Cycle exists." << endl;
+    }
+}
 
 int main() {
     Graph g(5);
