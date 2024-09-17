@@ -14,6 +14,7 @@ private:
     vector<list<int>> adjList;
     int vertices;
     int edges;
+
 public:
     explicit Graph(int vertices);
     void addEdge(int node_u, int node_v);
