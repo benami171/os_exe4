@@ -91,7 +91,7 @@ void Graph::eulerFinder() {
     vector<int> eulerianCycle = findEulerianCycle();
     if (!eulerianCycle.empty()) {
         cout << "Eulerian Cycle: ";
-        for (int v : eulerianCycle) {
+        for (int v: eulerianCycle) {
             cout << v << " ";
         }
         cout << endl;
@@ -108,16 +108,6 @@ int main() {
 
 
 // TODO - remove the part below from the main function.
-    vector<int> eulerianCircuit = g.findEulerianCycle();
-    if (!eulerianCircuit.empty()) {
-        cout << "Eulerian Circuit: ";
-        for (int v : eulerianCircuit) {
-            cout << v << " ";
-        }
-        cout << endl;
-    } else {
-        cout << "No Eulerian Circuit exists." << endl;
-    }
-
+    g.eulerFinder();
     return 0;
 }
