@@ -20,7 +20,7 @@ public:
     vector<int> findEulerCycle();
     bool isEulerianCycle();
     void dfs(int start_node, vector<bool> &visited);
-    void euler
+    void eulerCycle
 };
 
 
