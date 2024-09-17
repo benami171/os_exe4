@@ -16,6 +16,7 @@ private:
     int edges;
 
 public:
+
     explicit Graph(int vertices);
     void addEdge(int node_u, int node_v);
     vector<int> findEulerianCycle();
