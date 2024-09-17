@@ -11,6 +11,7 @@ using namespace std;
 
 class Graph {
 private:
+
     vector<list<int>> adjList;
     int vertices;
     int edges;
