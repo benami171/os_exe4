@@ -15,11 +15,12 @@ private:
     int vertices;
     int edges;
 public:
-    Graph(int vertices);
+    explicit Graph(int vertices);
     void addEdge(int node_u, int node_v);
-    vector<int> findEulerianCycle();
+    vector<int> findEulerCycle();
     bool isEulerianCycle();
     void dfs(int start_node, vector<bool> &visited);
+    void euler
 };
 
 
