@@ -13,7 +13,7 @@ void Graph::addEdge(int node_u, int node_v) {
     edges++;
 }
 
-vector<int> Graph::findEulerianCycle() {
+vector<int> Graph::findEulerCycle() {
     vector<int> circuit;
     if (!isEulerianCycle()) return circuit;
 
@@ -76,6 +76,8 @@ void Graph::dfs(int start_node, vector<bool> &visited) {
         }
     }
 }
+
+void Graph::eulerFinder
 
 
 int main() {
