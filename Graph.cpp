@@ -106,8 +106,6 @@ int main() {
     g.addEdge(1, 2);
     g.addEdge(2, 0);
 
-
-// TODO - remove the part below from the main function.
     g.eulerFinder();
     return 0;
 }
