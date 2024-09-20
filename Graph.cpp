@@ -63,7 +63,6 @@ bool Graph::isEulerianCycle() {
         }
     }
     if (nonZeroDegreeVertex == -1) return false; // No edges in the graph
-
     dfs(nonZeroDegreeVertex, visited);
 
     for (int i = 0; i < vertices; i++) {
