@@ -99,6 +99,10 @@ void Graph::eulerFinder() {
     }
 }
 
+void printUsage(const char *progName) {
+    cout << "Usage: " << progName << " -v <number_of_vertices> -e <number_of_edges> -s <random_seed>" << endl;
+}
+
 int main() {
     Graph g(7);
     g.addEdge(0, 1);

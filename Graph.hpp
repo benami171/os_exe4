@@ -18,6 +18,9 @@ private:
 
 public:
     explicit Graph(int vertices);
+    int getEdges() const ;
+    const vector<list<int>>& getAdjList() const;
+    void printGraph() const;
     void addEdge(int node_u, int node_v);
     vector<int> findEulerianCycle();
     bool isEulerianCycle();
