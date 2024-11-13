@@ -33,7 +33,7 @@ vector<int> Graph::findEulerianCycle() {
     int currentVertex = startVertex;
 
     while (!currentPath.empty()) {
-        if (!adjList[currentVertex].empty()) {
+        if (!adjList[currentVertex].empty()) { // while still has neighbors.
             currentPath.push(currentVertex);
             int nextVertex = adjList[currentVertex].front();
             adjList[currentVertex].pop_front();
