@@ -153,29 +153,53 @@ Graph.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Graph.cpp.s
 .PHONY : Graph.cpp.s
 
-funcs.o: funcs.cpp.o
-.PHONY : funcs.o
+algo.o: algo.cpp.o
+.PHONY : algo.o
 
 # target to build an object file
-funcs.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/funcs.cpp.o
-.PHONY : funcs.cpp.o
+algo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/algo.cpp.o
+.PHONY : algo.cpp.o
 
-funcs.i: funcs.cpp.i
-.PHONY : funcs.i
+algo.i: algo.cpp.i
+.PHONY : algo.i
 
 # target to preprocess a source file
-funcs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/funcs.cpp.i
-.PHONY : funcs.cpp.i
+algo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/algo.cpp.i
+.PHONY : algo.cpp.i
 
-funcs.s: funcs.cpp.s
-.PHONY : funcs.s
+algo.s: algo.cpp.s
+.PHONY : algo.s
 
 # target to generate assembly for a file
-funcs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/funcs.cpp.s
-.PHONY : funcs.cpp.s
+algo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/algo.cpp.s
+.PHONY : algo.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -189,9 +213,12 @@ help:
 	@echo "... Graph.o"
 	@echo "... Graph.i"
 	@echo "... Graph.s"
-	@echo "... funcs.o"
-	@echo "... funcs.i"
-	@echo "... funcs.s"
+	@echo "... algo.o"
+	@echo "... algo.i"
+	@echo "... algo.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

@@ -20,8 +20,8 @@ public:
     explicit Graph(int vertices);
     int getEdges() const ;
     int getVertices() const;
-    void printGraph(const Graph &g);
-    const vector<list<int>>& getAdjList() const;
+    void printGraph();
+    vector<list<int>>& getAdjList(); //
     void addEdge(int node_u, int node_v);
 
 };
