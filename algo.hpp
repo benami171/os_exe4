@@ -7,5 +7,4 @@ namespace algo{
     void dfs(Graph& graph, int start_node, vector<bool> &visited);
     void eulerFinder(Graph graph);
 
-
 }
