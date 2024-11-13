@@ -160,13 +160,13 @@ int main(int argc, char* argv[]) {
 
     for (int i = 0; i < num_edges; i++) {
         int node_u = dist(rng); // generate numbers in the range 0 to num_vertices - 1
-        int node_v = dist(rng); // generate numbers in the range 0 to num_vertices - 1
+        int node_v = dist(rng); 
         if (node_u == node_v) { // No self loops
             i--;
             continue;
         }
 
-        if (find(g.getAdjList()[node_u].begin(), g.getAdjList()[node_u].end(), node_v) != g.getAdjList()[node_u].end()) { // No parallel edges
+        if (find(g.getAdjList()[node_u].begin(), g.getAdjList()[node_u].end(), node_v) != g.getAdjList()[node_u].end()) {
             // if we went over the adjacency list of node_u and found node_v, then we have a parallel edge
             i--;
             continue;
