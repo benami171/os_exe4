@@ -14,7 +14,7 @@ void Graph::addEdge(int node_u, int node_v) {
 }
 
 vector<int> Graph::findEulerianCycle() {
-    vector<int> circuit;
+    vector<int> circuit; // 0 1 2 0
     if (!isEulerianCycle()) return circuit;
 
     // Find a vertex with at least one edge to start
@@ -25,7 +25,6 @@ vector<int> Graph::findEulerianCycle() {
             break;
         }
     }
-    if (startVertex == -1) return circuit; // No edges in the graph
 
     stack<int> currentPath;
     vector<int> tempCircuit;
@@ -58,20 +57,17 @@ bool Graph::isEulerianCycle() {
     // Find the first vertex with non-zero degree
     for (int i = 0; i < vertices; i++) {
         if (!adjList[i].empty()) {
-            nonZeroDegreeVertex = i;
+            nonZeroDegreeVertex = i; // the index of the vertex that has non-zero degree
             break;
         }
     }
+
+    // TODO - decide what to do in case all the vertices has degree 0.
     if (nonZeroDegreeVertex == -1) return false; // No edges in the graph
     dfs(nonZeroDegreeVertex, visited);
 
     for (int i = 0; i < vertices; i++) {
         if (!adjList[i].empty() && !visited[i]) return false;
-    }
-
-    // Check if all vertices have even degree
-    for (int i = 0; i < vertices; i++) {
-        if (adjList[i].size() % 2 != 0) return false;
     }
 
     return true;
