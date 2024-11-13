@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-add_executable(Main Graph.cpp Graph.hpp)
+add_executable(Main Graph.cpp Graph.hpp funcs.cpp
+        funcs.cpp)

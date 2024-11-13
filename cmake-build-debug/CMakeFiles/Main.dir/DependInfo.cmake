@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/benami/os_exe4/Graph.cpp" "CMakeFiles/Main.dir/Graph.cpp.o" "gcc" "CMakeFiles/Main.dir/Graph.cpp.o.d"
+  "/home/benami/os_exe4/funcs.cpp" "CMakeFiles/Main.dir/funcs.cpp.o" "gcc" "CMakeFiles/Main.dir/funcs.cpp.o.d"
   )
 
 # Targets to which this target links.
