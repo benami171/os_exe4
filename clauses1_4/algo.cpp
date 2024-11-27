@@ -1,9 +1,11 @@
 #include "algo.hpp"
+
 #include <utility>
 
 
+
 vector<int> algo::findEulerianCycle(Graph& g){
-    vector<int> circuit; 
+    vector<int> circuit; // 0 1 2 0
     if (!isEulerianCycle(g)) return circuit;
 
     // Find a vertex with at least one edge to start
@@ -39,6 +41,7 @@ vector<int> algo::findEulerianCycle(Graph& g){
 }
 
 bool algo::isEulerianCycle(Graph& g){
+
     for (int i = 0; i < g.getVertices(); i++) {
         if (g.getAdjList()[i].size() % 2 != 0) {
             cout << "Vertice " << i << " has Odd Degree" << endl;
@@ -58,8 +61,8 @@ bool algo::isEulerianCycle(Graph& g){
     }
     // TODO - decide what to do in case all the vertices has degree 0.
     if (nonZeroDegreeVertex == -1) return false; // No edges in the graph
-    
     dfs(g,nonZeroDegreeVertex, visited);
+
     for (int i = 0; i < g.getVertices(); i++) {
         if (!g.getAdjList()[i].empty() && !visited[i]) {
             cout << "Vertice " << i << " is non zero degree but unreachable from vertice " << nonZeroDegreeVertex

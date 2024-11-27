@@ -1,0 +1,5 @@
+File 'main.cpp'
+Lines executed:100.00% of 43
+Creating 'main.cpp.gcov'
+
+Lines executed:100.00% of 43

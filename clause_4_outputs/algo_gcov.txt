@@ -1,0 +1,5 @@
+File 'algo.cpp'
+Lines executed:95.00% of 60
+Creating 'algo.cpp.gcov'
+
+Lines executed:95.00% of 60

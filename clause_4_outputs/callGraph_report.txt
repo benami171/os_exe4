@@ -1,0 +1,64 @@
+==108548== Callgrind, a call-graph generating cache profiler
+==108548== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==108548== Using Valgrind-3.18.1-42b08ed5bd-20211015 and LibVEX; rerun with -h for copyright info
+==108548== Command: ./main -v 5000 -e 10000 -s 44
+==108548== Parent PID: 108547
+==108548== 
+--108548-- 
+--108548-- Valgrind options:
+--108548--    --tool=callgrind
+--108548--    -v
+--108548--    --error-exitcode=99
+--108548--    --tool=callgrind
+--108548--    --log-file=callGraph_report.txt
+--108548-- Contents of /proc/version:
+--108548--   Linux version 5.15.167.4-microsoft-standard-WSL2 (root@f9c826d3017f) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37) #1 SMP Tue Nov 5 00:21:55 UTC 2024
+--108548-- 
+--108548-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand-rdseed
+--108548-- Page sizes: currently 4096, max supported 4096
+--108548-- Valgrind library directory: /usr/libexec/valgrind
+==108548== For interactive control, run 'callgrind_control -h'.
+--108548-- Reading syms from /home/benami/os_exe4/main
+--108548-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+--108548--   Considering /usr/lib/debug/.build-id/41/86944c50f8a32b47d74931e3f512b811813b64.debug ..
+--108548--   .. build-id is valid
+--108548-- Reading syms from /usr/libexec/valgrind/callgrind-amd64-linux
+--108548--    object doesn't have a symbol table
+--108548--    object doesn't have a dynamic symbol table
+--108548-- Scheduler: using generic scheduler lock implementation.
+==108548== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-108548-by-benami-on-???
+==108548== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-108548-by-benami-on-???
+==108548== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-108548-by-benami-on-???
+==108548== 
+==108548== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==108548== don't want to do, unless you know exactly what you're doing,
+==108548== or are doing some strange experiment):
+==108548==   /usr/bin/vgdb --pid=108548 ...command...
+==108548== 
+==108548== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==108548==   /path/to/gdb ./main
+==108548== and then give GDB the following command
+==108548==   target remote | /usr/bin/vgdb --pid=108548
+==108548== --pid is optional if only one valgrind process is running
+==108548== 
+--108548-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--108548--    object doesn't have a symbol table
+--108548-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+--108548--    object doesn't have a symbol table
+--108548-- Reading syms from /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+--108548--    object doesn't have a symbol table
+--108548-- Reading syms from /usr/lib/x86_64-linux-gnu/libc.so.6
+--108548--   Considering /usr/lib/debug/.build-id/49/0fef8403240c91833978d494d39e537409b92e.debug ..
+--108548--   .. build-id is valid
+--108548-- Reading syms from /usr/lib/x86_64-linux-gnu/libm.so.6
+--108548--   Considering /usr/lib/debug/.build-id/a5/08ec5d8bf12fb7fd08204e0f87518e5cd0b102.debug ..
+--108548--   .. build-id is valid
+--108548-- Symbol match: found runtime_resolve: ld-linux-x86-64.so.2 +0x15c60=0x4015c60
+==108548== 
+--108548-- Start dumping at BB 9204557 (Prg.Term.)...
+--108548-- Dump to /home/benami/os_exe4/callgrind.out.108548
+--108548-- Dumping done.
+==108548== Events    : Ir
+==108548== Collected : 69405526
+==108548== 
+==108548== I   refs:      69,405,526

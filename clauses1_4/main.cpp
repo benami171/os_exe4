@@ -13,6 +13,10 @@ int main(int argc, char* argv[]) {
     int num_vertices = 0, num_edges = 0, seed = 0;
     int opt;
 
+    if(argc != 7) {
+        printUsage(argv[0]);
+        exit(EXIT_FAILURE);
+    }
     while (( opt = getopt(argc, argv, "v:e:s:")) != -1) {
         switch (opt) {
             case 'v':
@@ -35,7 +39,7 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    seed = clock();
+
     Graph g(num_vertices);
 
     mt19937 rng(seed); // seed the generator
@@ -59,7 +63,6 @@ int main(int argc, char* argv[]) {
     }
 
     eulerFinder(g);
-    g.printGraph();
     int const f = g.getEdges();
     cout << "number of edges: " << f << endl;
     return 0;
