@@ -3,3 +3,10 @@
 //
 
 #include "Guard.hpp"
+#include <iostream>
+
+int main(){
+
+    using namespace std;
+    cout << "dsdds";
+}
