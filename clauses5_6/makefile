@@ -28,11 +28,11 @@ TARGET = hello
 # Default target
 all: $(TARGET)
 
-valgrind_dgb: $(TARGET)
-	$(MAKE_VALGRIND_GDB) ./$(TARGET)
+valgrind_gdb: $(TARGET)
+	valgrind --leak-check=full --vgdb=yes --vgdb-error=0 ./$(TARGET)
 # to run valgrind with memcheck tool
 valgrind: $(TARGET)
-	valgrind $(VALGRIND_MEMCHECK_FLAGS) ./$(TARGET)
+	valgrind --leak-check=full -s --track-origins=yes --show-leak-kinds=all  --error-exitcode=99 ./$(TARGET)
 
 
 # Link object files to create the executable
@@ -45,7 +45,7 @@ $(TARGET): $(OBJS)
 
 # Clean up build files
 clean:
-	rm -f $(OBJS) $(TARGET) memcheck_report.txt callGraph_report.txt
+	rm -f $(OBJS) $(TARGET)
 
 # Phony targets
 .PHONY: all clean valgrind valgrind_callGraph
