@@ -1,4 +1,0 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/benami/os_exe4 -B /home/benami/os_exe4/cmake-build-debug
--- Configuring done
--- Generating done
--- Build files have been written to: /home/benami/os_exe4/cmake-build-debug
