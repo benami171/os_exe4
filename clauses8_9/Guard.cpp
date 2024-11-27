@@ -1,12 +1,9 @@
-//
-// Created by Barak Rozenkvit on 27/11/2024.
-//
-
 #include "Guard.hpp"
-#include <iostream>
 
-int main(){
+Guard::Guard() {
+    pthread_mutex_lock(&mutex);
+}
 
-    using namespace std;
-    cout << "dsdds";
+Guard::~Guard() {
+    pthread_mutex_unlock(&mutex);
 }
