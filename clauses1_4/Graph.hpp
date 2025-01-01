@@ -21,7 +21,7 @@ public:
     int getEdges() const ;
     int getVertices() const;
     void printGraph();
-    vector<list<int>>& getAdjList(); //
+    vector<list<int>>& getAdjList();
     void addEdge(int node_u, int node_v);
 
 };
