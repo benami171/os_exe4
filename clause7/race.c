@@ -9,11 +9,15 @@
 
 #define NUM_THREADS 20
 
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
 long accum = 0;
 
 void *square(void *param) {
     int x = *(int *)param;
+    pthread_mutex_lock(&mutex);
     accum += x * x;
+    pthread_mutex_unlock(&mutex);
     //sleep(1);
     pthread_exit(NULL);
 }
